@@ -1,5 +1,5 @@
 <?php 
-	require ("config.php");
+	require ("../config.php");
 
 		echo $start = date("Y-m-d H:i:s", strtotime($_POST['start']));
 		echo $end = date("Y-m-d H:i:s", strtotime($_POST['end']));
@@ -24,7 +24,7 @@
 			$values = array('booking_start' => $start, 'booking_end' => $end, 'client_name' => $client_name, 'table_id' => $table_id);
 			$query = $fpdo->insertInto('nextable_bookings', $values)->execute();
 
-			header('location: index.php');
+			header('location: ../index.php');
 			var_dump($query);
 		} else {
 			foreach ($errors as $key => $value) {
@@ -33,6 +33,6 @@
 			foreach ($oldvals as $key => $value) {
 				$_SESSION['oldvals'][$key] = $value;
 			}
-			header('location: index.php');
+			header('location: ../index.php');
 		}
 ?>

@@ -20,6 +20,7 @@
 	padding: 15px;
 	margin: 1%;
 	text-align: center;
+	cursor: pointer;
 }
 
 .tables__table h3, .tables__table h4, .tables__table h5 {
@@ -29,4 +30,13 @@
 
 .tables__table--booked {
 	background: red !important;
+	color: white;
+}
+
+.tableAdd{
+	font-size: 24px !important;
+	float: right;
+	color: green;
+	margin:0px 15px;
+	font-family: sans-serif;
 }
